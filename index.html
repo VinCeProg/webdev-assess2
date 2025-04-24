@@ -51,13 +51,15 @@
               type="text"
               id="business"
               name="business"
-              placeholder="Suki's Manukan"
+              placeholder="Bigasan ni Panchito"
               class="input-text"
+              required
             />
             <br />
             <br />
             <label for="product">Product Type</label>
-            <select name="product" id="product">
+            <select name="product" id="product" required>
+              <option value="">--Options--</option>
               <option value="fruits">Fruits</option>
               <option value="vegetables">Vegetables</option>
               <option value="meat">Meat</option>
@@ -74,6 +76,7 @@
               maxlength="8"
               placeholder="0400XXXX"
               class="input-text"
+              required
             />
           </fieldset>
           <fieldset>
@@ -83,7 +86,7 @@
               <em> How would you rate your food handling hygiene? </em>
             </div>
             <br />
-            <input type="radio" id="good" name="sanitary" value="good" />
+            <input type="radio" id="good" name="sanitary" value="good" required/>
             <label for="good" class="lbl">Good</label>
             <br />
             <input type="radio" id="fair" name="sanitary" value="fair" />
