@@ -1,12 +1,18 @@
 :root {
-  --fg-color: #ffffff;
-  --bg-color: #000000;
+  --color-primary: #4BA3C7;      /* Sky Blue - main branding, buttons */
+  --color-secondary: #FFD93D;    /* Lemon Yellow - accents, highlights */
+  --color-neutral: #F4F4F4;      /* Cool Gray - backgrounds, cards */
+  --color-text-dark: #333333;    /* Charcoal - text and headings */
+  --color-blur: rgba(45, 45, 45, 0.8);
+  --montserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: var(--poppins);
   border: 1px dashed magenta;
 }
 
@@ -14,29 +20,26 @@ body {
   background-image: url(../img/market.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .hero {
-  padding-top: 8vh;
+  padding-top: 9vh;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-neutral);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
-.head-text {
-  text-align: right;
-  margin: 20vh 2vw 10vh 2vw;
-  background-color: rgba(45, 45, 45, 0.1);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  width: 60%;
-  border-radius: 20px;
-}
-
-.head-text h1 {
+.hero h1 {
   font-size: min(3rem, 6vw);
+  text-align: center;
   color: #ffffff;
-  margin: 2rem;
-  padding: 1rem;
+  margin: 5vh 0 0 0;
 }
 
 footer {
@@ -44,12 +47,18 @@ footer {
   text-align: center;
   margin: 0;
   padding: 5px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 /* Responsive Menu */
 @media (max-width: 600px) {
   body {
     background-attachment: scroll;
+  }
+
+  .hero h1 {
+    margin: 1rem;
+    font-size: 2.5rem;
   }
 
   .navbar {
