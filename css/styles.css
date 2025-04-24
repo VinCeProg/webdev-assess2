@@ -53,11 +53,13 @@ main {
 }
 
 .popover-dialog {
-  width: 60%;
-
+  width: clamp(600px, 40vw, 90vw);
 }
 
 form {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  place-items: center;
   border-radius: 12px;
   background-color: var(--color-primary);
   width: 100%;
@@ -65,6 +67,7 @@ form {
 }
 
 fieldset {
+  width: 100%;
   background-color: var(--color-primary);
   border-color: var(--color-secondary);
   border-radius: 12px;
@@ -83,9 +86,10 @@ legend {
 
 label {
   margin-left: 20px;
+  font-weight: 600;
 }
 
-input, select {
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]), select {
   width: 100%;
   padding: 12px 24px;
   border-radius: 24px;
@@ -119,10 +123,45 @@ option {
   outline: none;
 }
 
-.input-radio {
+input[type="radio"], input[type="checkbox"] {
+  accent-color: var(--color-text-dark2);
+  margin-left: 24px;
+}
+
+.lbl {
+  margin: 16px 8px;
+  font-weight: normal;
+}
+
+.text-wrapper {
+  padding: 0 clamp(12px, 5vw, 32px);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-wrapper em {
+  font-size: 0.8rem;
   display: block;
-  margin: 6px 0;
+  line-height: 1.6;
+  color: var(--color-text-dark); /* Optional */
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--color-text-dark);
   font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 24px;
+  transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-text-dark2);
+  transform: scale(1.03);
 }
 
 footer {
@@ -142,10 +181,6 @@ footer a {
 
 /* Responsive Menu */
 @media (max-width: 600px) {
-  body {
-    background-attachment: scroll;
-  }
-
   .hero h1 {
     margin: 1rem;
     font-size: 2.5rem;

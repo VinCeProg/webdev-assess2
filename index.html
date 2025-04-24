@@ -76,23 +76,34 @@
               class="input-text"
             />
           </fieldset>
-          <fieldset class="compliance">
+          <fieldset>
             <legend>Compliance Check</legend>
-            <label class="input-radio">
-              <input type="radio" name="sanitary" value="good" required />
-              Good
-            </label>
+            <label>Sanitary Practices</label> <br />
+            <div class="text-wrapper">
+              <em> How would you rate your food handling hygiene? </em>
+            </div>
             <br />
-            <label class="input-radio">
-              <input type="radio" name="sanitary" value="fair" />
-              Fair 
-            </label>
+            <input type="radio" id="good" name="sanitary" value="good" />
+            <label for="good" class="lbl">Good</label>
             <br />
-            <label class="input-radio">
-              <input type="radio" name="sanitary" value="poor" />
-              Poor
-            </label>
+            <input type="radio" id="fair" name="sanitary" value="fair" />
+            <label for="fair" class="lbl">Fair</label>
+            <br />
+            <input type="radio" id="poor" name="sanitary" value="poor" />
+            <label for="poor" class="lbl">Poor</label>
+            <br />
+            <br />
+            <label>Stall Cleanliness</label> <br />
+            <div class="text-wrapper">
+              <em> Which daily cleaning tasts do you regularly perform? </em>
+              <br />
+            </div>
+            <input type="checkbox" name="cleaning" value="daily-cleaning" />
+            <label class="lbl">Daily Cleaning</label><br />
+            <input type="checkbox" name="cleaning" value="waste-disposal" />
+            <label class="lbl">Waste Disposal</label>
           </fieldset>
+          <input type="submit" value="Join the Market">
         </form>
       </div>
     </main>
