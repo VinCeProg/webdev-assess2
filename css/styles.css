@@ -7,14 +7,44 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 1px dashed magenta;
+}
+
+body {
+  background-image: url(../img/market.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero {
-  margin-top: 10vh;
+  padding-top: 8vh;
+  display: flex;
+  justify-content: end;
 }
 
+.head-text {
+  text-align: right;
+  margin: 20vh 2vw 10vh 2vw;
+  background-color: rgba(45, 45, 45, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  width: 60%;
+  border-radius: 20px;
+}
 
+.head-text h1 {
+  font-size: min(3rem, 6vw);
+  color: #ffffff;
+  margin: 2rem;
+  padding: 1rem;
+}
 
+footer {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+}
 
 /* Responsive Menu */
 @media (max-width: 600px) {
@@ -25,9 +55,6 @@
   .navbar {
     height: auto;
     flex-direction: column;
-    background-color: rgba(45, 45, 45, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
   }
 
   .navbar.menu-active {
