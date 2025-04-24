@@ -50,6 +50,7 @@
 }
 
 .menu a:hover {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
@@ -64,6 +65,7 @@
   padding: 0.3rem 1rem;
   background-color: tomato;
   border-radius: 50rem;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .burger-toggle {
