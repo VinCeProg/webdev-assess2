@@ -1,8 +1,9 @@
 :root {
-  --color-primary: #4BA3C7;      /* Sky Blue - main branding, buttons */
-  --color-secondary: #FFD93D;    /* Lemon Yellow - accents, highlights */
-  --color-neutral: #F4F4F4;      /* Cool Gray - backgrounds, cards */
-  --color-text-dark: #333333;    /* Charcoal - text and headings */
+  --color-primary: #E1EEBC;
+  --color-neutral: #90C67C;
+  --color-secondary: #67AE6E;
+  --color-text-dark2: #328E6E;
+  --color-text-dark: #00806C;
   --color-blur: rgba(45, 45, 45, 0.8);
   --montserrat: "Montserrat", sans-serif;
   --poppins: "Poppins", sans-serif;
@@ -19,10 +20,11 @@
 body {
   background-color: var(--color-primary);
   color: var(--color-neutral);
-  background-image: url(../img/market.jpg);
+  background-image: url(../img/market.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -32,20 +34,99 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--color-neutral);
+  color: var(--color-text-dark);
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
 .hero h1 {
   font-size: min(3rem, 6vw);
   text-align: center;
-  color: #ffffff;
+  color: var(--color-text-dark);
   margin: 5vh 0 0 0;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.popover-dialog {
+  width: 60%;
+
+}
+
+form {
+  border-radius: 12px;
+  background-color: var(--color-primary);
+  width: 100%;
+  padding: 24px;
+}
+
+fieldset {
+  background-color: var(--color-primary);
+  border-color: var(--color-secondary);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1.1rem;
+  color: var(--color-text-dark2);
+}
+
+legend {
+  color: var(--color-text-dark);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-left: 8px;
+}
+
+label {
+  margin-left: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 2px solid var(--color-neutral);
+  background-color: inherit;
+  color: var(--color-text-dark);
+  font-size: 1rem;
+}
+
+select {
+  appearance: none; /* removes default OS arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234BA3C7" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14l-4.796-5.481c-.566-.647-.106-1.659.753-1.659h9.592c.86 0 1.32 1.012.753 1.659L8.753 11.14a1 1 0 0 1-1.506 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+option {
+  color: var(--color-text-dark);
+  font-family: var(--poppins);
+  font-size: 1rem;
+}
+
+.input-text {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.input-text:focus, select:focus {
+  border-color: var(--color-text-dark2);
+  transform: scale(1.02);
+  outline: none;
+}
+
+.input-radio {
+  display: block;
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
 footer {
-  color: white;
+  color: var(--color-text-dark);
   text-align: center;
   margin: 0;
   padding: 5px;
@@ -54,8 +135,10 @@ footer {
 
 footer a {
   font-weight: 600;
-  color: var(--color-secondary);
+  color: var(--color-text-dark2);
 }
+
+
 
 /* Responsive Menu */
 @media (max-width: 600px) {
@@ -66,6 +149,10 @@ footer a {
   .hero h1 {
     margin: 1rem;
     font-size: 2.5rem;
+  }
+
+  .popover-dialog {
+    width: 100vw;
   }
 
   .navbar {

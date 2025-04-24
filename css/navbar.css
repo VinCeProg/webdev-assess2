@@ -1,3 +1,14 @@
+:root {
+  --color-primary: #E1EEBC;
+  --color-neutral: #90C67C;
+  --color-secondary: #67AE6E;
+  --color-text-dark2: #328E6E;
+  --color-text-dark: #00806C;
+  --color-blur: rgba(255, 255, 255, 0.1);
+  --montserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
 /* Navbar Styles */
 .navbar {
   display: flex;
@@ -5,6 +16,9 @@
   justify-content: space-between;
   color: var(--chalk-white);
   padding: 5px 20px;
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   height: 9vh;
   position: fixed;
   top: 0;
@@ -39,6 +53,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 .navbar ul li a {
@@ -50,7 +65,6 @@
 }
 
 .menu a:hover {
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }

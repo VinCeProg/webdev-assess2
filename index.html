@@ -42,11 +42,59 @@
     </header>
 
     <main>
-      <form>
-        <fieldset class="">
-          <legend>Vendor Details</legend>
-        </fieldset>
-      </form>
+      <div id="popup-reg" class="popover-dialog">
+        <form>
+          <fieldset class="fs-ven-details">
+            <legend>Vendor Details</legend>
+            <label for="business">Business Name</label>
+            <input
+              type="text"
+              id="business"
+              name="business"
+              placeholder="Suki's Manukan"
+              class="input-text"
+            />
+            <br />
+            <br />
+            <label for="product">Product Type</label>
+            <select name="product" id="product">
+              <option value="fruits">Fruits</option>
+              <option value="vegetables">Vegetables</option>
+              <option value="meat">Meat</option>
+              <option value="fish">Fish</option>
+              <option value="grocery">Grocery</option>
+            </select>
+            <br />
+            <br />
+            <label for="permit-num">Permit Number</label>
+            <input
+              type="text"
+              id="permit-num"
+              name="permit-num"
+              maxlength="8"
+              placeholder="0400XXXX"
+              class="input-text"
+            />
+          </fieldset>
+          <fieldset class="compliance">
+            <legend>Compliance Check</legend>
+            <label class="input-radio">
+              <input type="radio" name="sanitary" value="good" required />
+              Good
+            </label>
+            <br />
+            <label class="input-radio">
+              <input type="radio" name="sanitary" value="fair" />
+              Fair 
+            </label>
+            <br />
+            <label class="input-radio">
+              <input type="radio" name="sanitary" value="poor" />
+              Poor
+            </label>
+          </fieldset>
+        </form>
+      </div>
     </main>
 
     <footer>
