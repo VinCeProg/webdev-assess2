@@ -53,6 +53,9 @@ tbody tr {
 
 tbody tr:nth-child(even) {
   background-color: var(--color-neutral);
+  td {
+    color: var(--color-primary);
+  }
 }
 
 tbody tr.poor {
