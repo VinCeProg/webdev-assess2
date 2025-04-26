@@ -3,7 +3,7 @@
   --color-neutral: #90c67c;
   --color-secondary: #67ae6e;
   --color-text-dark2: #328e6e;
-  --color-text-dark: #00806c;
+  --color-text-dark: #004C3F;
   --color-blur: rgba(45, 45, 45, 0.15);
   --montserrat: "Montserrat", sans-serif;
   --poppins: "Poppins", sans-serif;
@@ -52,10 +52,7 @@ tbody tr {
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--color-neutral);
-  td {
-    color: var(--color-primary);
-  }
+  background-color: #d3e998;
 }
 
 tbody tr.poor {
