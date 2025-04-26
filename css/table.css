@@ -52,7 +52,7 @@ tbody tr {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #d3e998;
+  background-color: #cfdbae;
 }
 
 tbody tr.poor {
