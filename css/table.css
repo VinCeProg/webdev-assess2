@@ -1,10 +1,10 @@
 :root {
-  --color-primary: #E1EEBC;
-  --color-neutral: #90C67C;
-  --color-secondary: #67AE6E;
-  --color-text-dark2: #328E6E;
-  --color-text-dark: #00806C;
-  --color-blur: rgba(45, 45, 45, 0.8);
+  --color-primary: #e1eebc;
+  --color-neutral: #90c67c;
+  --color-secondary: #67ae6e;
+  --color-text-dark2: #328e6e;
+  --color-text-dark: #00806c;
+  --color-blur: rgba(45, 45, 45, 0.15);
   --montserrat: "Montserrat", sans-serif;
   --poppins: "Poppins", sans-serif;
 }
@@ -18,11 +18,12 @@
 table {
   background-color: var(--color-primary);
   border-collapse: collapse;
-  width: clamp(960px ,50vw, 100%);
-}
-
-tr:nth-child(even) {
-  background-color: var(--color);
+  width: clamp(768px, 50vw, 90%);
+  margin: 16px 0;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 8px var(--color-blur);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
 }
 
 thead {
@@ -30,27 +31,98 @@ thead {
   color: var(--color-primary);
 }
 
-th, td {
-  border: 2px solid var(--color-text-dark2);
-  text-align: center;
+thead th {
+  padding: 8px 12px;
+  font-size: 0.95rem;
 }
 
-th {
-  height: 3em;
+th,
+td {
+  text-align: left;
+  padding: 12px 16px;
 }
 
 td {
   color: var(--color-text-dark2);
 }
 
-input[type="checkbox"]:disabled {
-  accent-color: var(--color-text-dark);
+tbody tr {
+  border-bottom: 2px solid var(--color-secondary);
+  transition: 0.3s ease;
 }
 
-tr.poor {
-  background-color: rgb(255, 99, 71, 0.6);
-  font-weight: 600;
+tbody tr:nth-child(even) {
+  background-color: var(--color-neutral);
+}
+
+tbody tr.poor {
+  background-color: #ff7f7f;
+  font-weight: 500;
   td {
     color: var(--color-primary);
+  }
+}
+
+tbody tr:hover {
+  transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  table {
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  th,
+  td {
+    border: 2px solid #ddd;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid var(--color-text-dark);
+    display: block;
+    margin-bottom: 24px;
+    background-color: var(--color-primary);
+  }
+
+  table td {
+    border-bottom: 1px solid var(--color-text-dark);
+    display: block;
+    font-size: 1em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: var(--color-text-dark2);
+    td {
+      color: var(--color-primary);
+    }
+  }
+
+  tbody tr.poor {
+    background-color: #ff7f7f; /* Light Tomato */
   }
 }
