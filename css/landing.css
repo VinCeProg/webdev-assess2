@@ -4,7 +4,7 @@
   --color-secondary: #67AE6E;
   --color-text-dark2: #328E6E;
   --color-text-dark: #00806C;
-  --color-blur: rgba(45, 45, 45, 0.8);
+  --color-blur: rgba(45, 45, 45, 0.15);
   --montserrat: "Montserrat", sans-serif;
   --poppins: "Poppins", sans-serif;
 }
@@ -27,6 +27,7 @@ form {
   background-color: var(--color-primary);
   width: 100%;
   padding: 24px;
+  box-shadow: 2px 2px 8px var(--color-blur);
 }
 
 fieldset {
