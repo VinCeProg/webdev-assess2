@@ -11,17 +11,23 @@
 
 .table-container {
   padding: 24px;
+  display: flex;
+  justify-content: center;
 }
 
 table {
   background-color: var(--color-primary);
   border-collapse: collapse;
-  /* border-radius: 20px; */
-  width: 100%;
+  width: clamp(960px ,50vw, 100%);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color);
 }
 
 thead {
   background-color: var(--color-text-dark2);
+  color: var(--color-primary);
 }
 
 th, td {
@@ -41,7 +47,10 @@ input[type="checkbox"]:disabled {
   accent-color: var(--color-text-dark);
 }
 
-.poor {
-    background-color: tomato;
-    font-weight: bold;
+tr.poor {
+  background-color: rgb(255, 99, 71, 0.6);
+  font-weight: 600;
+  td {
+    color: var(--color-primary);
+  }
 }
