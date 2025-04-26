@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMVR | Home</title>
+    <!-- CSS IMPORTS -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/landing.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- ICON -->
+    <link rel="icon" type="image/png" href="./img/team9-logo-2.png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar" id="navbar">
+      <a href="./index.html" class="logo-title">
+        <img src="./img/team9-logo-2.png" alt="team9-logo" class="logo" />
+        <h1>TEAM-9</h1>
+      </a>
+      <button class="burger-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="menu">
+        <li><a href="#">Submissions</a></li>
+        <li><a href="./index.html" class="btn-register">Register</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div class="hero">
+        <h1>Market Vendor Registration</h1>
+        <p>
+          A simple way for public market vendors to register their stalls and
+          stay compliant with local regulations — all in one place.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div id="popup-reg" class="popover-dialog">
+        <form>
+          <fieldset class="fs-ven-details">
+            <legend>Vendor Details</legend>
+            <label for="business">Business Name</label>
+            <input
+              type="text"
+              id="business"
+              name="business"
+              placeholder="Bigasan ni Panchito"
+              class="input-text"
+              required
+            />
+            <br />
+            <br />
+            <label for="product">Product Type</label>
+            <select name="product" id="product" required>
+              <option value="">--Options--</option>
+              <option value="fruits">Fruits</option>
+              <option value="vegetables">Vegetables</option>
+              <option value="meat">Meat</option>
+              <option value="fish">Fish</option>
+              <option value="grocery">Grocery</option>
+            </select>
+            <br />
+            <br />
+            <label for="permit-num">Permit Number</label>
+            <input
+              type="text"
+              id="permit-num"
+              name="permit-num"
+              maxlength="8"
+              placeholder="0400XXXX"
+              class="input-text"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Compliance Check</legend>
+            <label>Sanitary Practices</label> <br />
+            <div class="text-wrapper">
+              <em> How would you rate your food handling hygiene? </em>
+            </div>
+            <br />
+            <input type="radio" id="good" name="sanitary" value="good" required/>
+            <label for="good" class="lbl">Good</label>
+            <br />
+            <input type="radio" id="fair" name="sanitary" value="fair" />
+            <label for="fair" class="lbl">Fair</label>
+            <br />
+            <input type="radio" id="poor" name="sanitary" value="poor" />
+            <label for="poor" class="lbl">Poor</label>
+            <br />
+            <br />
+            <label>Stall Cleanliness</label> <br />
+            <div class="text-wrapper">
+              <em> Which daily cleaning tasts do you regularly perform? </em>
+              <br />
+            </div>
+            <input type="checkbox" name="cleaning" value="daily-cleaning" />
+            <label class="lbl">Daily Cleaning</label><br />
+            <input type="checkbox" name="cleaning" value="waste-disposal" />
+            <label class="lbl">Waste Disposal</label>
+          </fieldset>
+          <input type="submit" value="Join the Market">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 TEAM 9 - DIT 2-1</p>
+      <p>Crafted with passion for Web Development</p>
+      <p><a href="mailto:team9@example.com">Contact Us via Email</a></p>
+    </footer>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
