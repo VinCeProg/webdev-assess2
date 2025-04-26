@@ -1,0 +1,118 @@
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.popover-dialog {
+  width: clamp(600px, 40vw, 90vw);
+}
+
+form {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  place-items: center;
+  border-radius: 12px;
+  background-color: var(--color-primary);
+  width: 100%;
+  padding: 24px;
+}
+
+fieldset {
+  width: 100%;
+  background-color: var(--color-primary);
+  border-color: var(--color-secondary);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1.1rem;
+  color: var(--color-text-dark2);
+}
+
+legend {
+  color: var(--color-text-dark);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-left: 8px;
+}
+
+label {
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]), select {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 2px solid var(--color-neutral);
+  background-color: inherit;
+  color: var(--color-text-dark);
+  font-size: 1rem;
+}
+
+select {
+  appearance: none; /* removes default OS arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234BA3C7" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14l-4.796-5.481c-.566-.647-.106-1.659.753-1.659h9.592c.86 0 1.32 1.012.753 1.659L8.753 11.14a1 1 0 0 1-1.506 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+option {
+  color: var(--color-text-dark);
+  font-family: var(--poppins);
+  font-size: 1rem;
+}
+
+.input-text {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.input-text:focus, select:focus {
+  border-color: var(--color-text-dark2);
+  transform: scale(1.02);
+  outline: none;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  accent-color: var(--color-text-dark2);
+  margin-left: 24px;
+}
+
+.lbl {
+  margin: 16px 8px;
+  font-weight: normal;
+}
+
+.text-wrapper {
+  padding: 0 clamp(12px, 5vw, 32px);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-wrapper em {
+  font-size: 0.8rem;
+  display: block;
+  line-height: 1.6;
+  color: var(--color-text-dark); /* Optional */
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--color-text-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 24px;
+  transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-text-dark2);
+  transform: scale(1.03);
+}
