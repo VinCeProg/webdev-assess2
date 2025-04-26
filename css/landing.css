@@ -1,3 +1,13 @@
+:root {
+  --color-primary: #E1EEBC;
+  --color-neutral: #90C67C;
+  --color-secondary: #67AE6E;
+  --color-text-dark2: #328E6E;
+  --color-text-dark: #00806C;
+  --color-blur: rgba(45, 45, 45, 0.8);
+  --montserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
 
 main {
   display: flex;
