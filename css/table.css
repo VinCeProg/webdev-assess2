@@ -9,7 +9,74 @@
   --poppins: "Poppins", sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-container {
+  margin: 8px;
+  margin-top: 20px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-dark);
+  width: 55%;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.filter-items {
+  flex-grow: 1;
+  padding: 8px;
+  padding-left: 16px;
+  margin: 4px;
+  width: 30%;
+  border: none;
+  border-radius: 50rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+}
+
+.btn {
+  flex-grow: 1;
+  padding: 8px 12px;
+  margin: 4px;
+  background-color: var(--color-text-dark);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 50rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: .9rem;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.3s ease;
+  box-shadow: 2px 2px 4px rgba(45, 45, 45, 0.15);
+}
+
+.btn:hover {
+  background-color: var(--color-text-dark2);
+  transform: scale(1.1);
+}
+
+.filter-items {
+  transform: scale(1);
+  box-shadow: 2px 2px 4px rgba(45, 45, 45, 0.15);
+  transition: 0.3s ease;
+}
+
+.filter-items:focus {
+  border-color: var(-);
+  transform: scale(1.02);
+  outline-color: var(--color-text-dark);
+}
+
 .table-container {
+  width: 100%;
   padding: 24px;
   display: flex;
   justify-content: center;
@@ -19,7 +86,6 @@ table {
   background-color: var(--color-primary);
   border-collapse: collapse;
   width: clamp(768px, 50vw, 90%);
-  margin: 16px 0;
   font-size: 0.9rem;
   box-shadow: 2px 2px 8px var(--color-blur);
   border-radius: 8px 8px 0 0;
@@ -68,6 +134,19 @@ tbody tr:hover {
 }
 
 @media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .filter-items {
+    width: 100%;
+  }
+
+  .btn {
+    width: 90%;
+  }
+
   table {
     border: 0;
     background-color: transparent;
