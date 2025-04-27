@@ -20,17 +20,22 @@
   </head>
 
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
       <a href="./index.html" class="logo-title">
+        <!-- LOGO -->
         <img src="./img/team9-logo-2.png" alt="team9-logo" class="logo" />
         <h1>TEAM-9</h1>
       </a>
+      <!-- MENU -->
       <button class="burger-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="menu">
         <li><a href="./links/table.html">Submissions</a></li>
         <li><a href="#" class="btn-register">Register</a></li>
       </ul>
     </nav>
+
+    <!-- HEADER -->
     <header>
       <div class="hero">
         <h1>Market Vendor Registration</h1>
@@ -43,11 +48,16 @@
       </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
       <div id="popup-reg" class="popover-dialog">
+
+        <!-- FORM -->
         <form>
+          <!-- VENDOR DETAILS -->
           <fieldset class="fs-ven-details">
             <legend>Vendor Details</legend>
+            <!-- INPUT BUSINESS NAME -->
             <label for="business">Business Name</label>
             <input
               type="text"
@@ -59,6 +69,8 @@
             />
             <br />
             <br />
+
+            <!-- INPUT PRODUCT TYPE (DROPDOWN) -->
             <label for="product">Product Type</label>
             <select name="product" id="product" required>
               <option value="">--Options--</option>
@@ -70,19 +82,25 @@
             </select>
             <br />
             <br />
+
+            <!-- INPUT PERMIT NUMBER (TEXT) -->
             <label for="permit-num">Permit Number</label>
             <input
               type="text"
               id="permit-num"
               name="permit-num"
-              maxlength="8"
-              placeholder="0400XXXX"
+              maxlength="12"
+              placeholder="PMV-12345"
               class="input-text"
               required
             />
           </fieldset>
+
+          <!-- COMPLIANCE CHECK -->
           <fieldset>
             <legend>Compliance Check</legend>
+
+            <!-- INPUT SANITARY PRACTICES (RADIO) -->
             <label>Sanitary Practices</label> <br />
             <div class="text-wrapper">
               <em> How would you rate your food handling hygiene? </em>
@@ -104,6 +122,8 @@
             <label for="poor" class="lbl">Poor</label>
             <br />
             <br />
+
+            <!-- INPUT STALL CLEANLINESS (CHECKBOX) -->
             <label>Stall Cleanliness</label> <br />
             <div class="text-wrapper">
               <em> Which daily cleaning tasts do you regularly perform? </em>
@@ -114,11 +134,14 @@
             <input type="checkbox" name="cleaning" value="waste-disposal" />
             <label class="lbl">Waste Disposal</label>
           </fieldset>
+
+          <!-- SUBMIT BUTTON -->
           <input type="submit" value="Join the Market" />
         </form>
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer>
       <p>&copy; 2025 TEAM 9 - DIT 2-1</p>
       <p>Crafted with passion for Web Development</p>
