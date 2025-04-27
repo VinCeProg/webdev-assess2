@@ -51,6 +51,7 @@
     <main>
       <!-- TABLE SEARCH AND EXPORT -->
       <div class="filter-container">
+        <!-- FILTER DROPDOWN -->
         <label for="sort">Sort by</label>
         <select name="sort" id="sort" class="filter-items dropdown">
           <option value="BUSINESS-NAME">Business Name</option>
@@ -58,8 +59,11 @@
           <option value="PERMIT NUMBER">Permit Number</option>
           <option value="SANITARY PRACTICES">Sanitary Practices</option>
         </select>
+        <!-- FILTER SEARCH -->
         <input type="search" placeholder="Search" class="filter-items search">
+        <!-- FILTER BUTTON -->
         <button class="btn btn-filter">Filter</button>
+        <!-- EXPORT BUTTON -->
         <button class="btn btn-export">Export</button>
       </div>
       
@@ -93,6 +97,7 @@
                 >
               </td>
             </tr>
+
             <tr>
               <td scope="row" data-label="Business Name">Seafood Delight</td>
               <td data-label="Product Type">Fish</td>
@@ -110,6 +115,7 @@
                 >
               </td>
             </tr>
+
             <tr>
               <td scope="row" data-label="Business Name">Baker's Corner</td>
               <td data-label="Product Type">Grocery</td>
@@ -127,6 +133,7 @@
                 >
               </td>
             </tr>
+
             <tr>
               <td scope="row" data-label="Business Name">Meat Masters</td>
               <td data-label="Product Type">Meat</td>
@@ -141,6 +148,7 @@
                 <label><input type="checkbox" disabled /> Waste Disposal</label>
               </td>
             </tr>
+
             <tr>
               <td scope="row" data-label="Business Name">Spice World</td>
               <td data-label="Product Type">Grocery</td>
@@ -158,6 +166,7 @@
                 >
               </td>
             </tr>
+
             <tr class="poor">
               <td scope="row" data-label="Business Name">Snack Shack</td>
               <td data-label="Product Type">Fruits</td>
@@ -183,6 +192,7 @@
                 <label><input type="checkbox" disabled /> Waste Disposal</label>
               </td>
             </tr>
+            
             <tr>
               <td scope="row" data-label="Business Name">Organic Hub</td>
               <td data-label="Product Type">Vegetables</td>
