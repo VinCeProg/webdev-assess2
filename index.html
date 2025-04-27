@@ -34,10 +34,12 @@
     <header>
       <div class="hero">
         <h1>Market Vendor Registration</h1>
-        <p>
-          A simple way for public market vendors to register their stalls and
-          stay compliant with local regulations — all in one place.
-        </p>
+        <div class="subtext-container">
+          <p>
+            A simple way for public market vendors to register their stalls and
+            stay compliant with local regulations — all in one place.
+          </p>
+        </div>
       </div>
     </header>
 
@@ -86,7 +88,13 @@
               <em> How would you rate your food handling hygiene? </em>
             </div>
             <br />
-            <input type="radio" id="good" name="sanitary" value="good" required/>
+            <input
+              type="radio"
+              id="good"
+              name="sanitary"
+              value="good"
+              required
+            />
             <label for="good" class="lbl">Good</label>
             <br />
             <input type="radio" id="fair" name="sanitary" value="fair" />
@@ -106,7 +114,7 @@
             <input type="checkbox" name="cleaning" value="waste-disposal" />
             <label class="lbl">Waste Disposal</label>
           </fieldset>
-          <input type="submit" value="Join the Market">
+          <input type="submit" value="Join the Market" />
         </form>
       </div>
     </main>

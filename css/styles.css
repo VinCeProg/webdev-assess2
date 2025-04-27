@@ -47,6 +47,10 @@ body {
   margin: 5vh 0 0 0;
 }
 
+.subtext-container {
+  width: 50%;
+}
+
 footer {
   color: var(--color-text-dark);
   text-align: center;
@@ -67,6 +71,10 @@ footer a {
   .hero h1 {
     margin: 1rem;
     font-size: 2.5rem;
+  }
+
+  .subtext-container {
+    width: 100%;
   }
 
   .popover-dialog {
