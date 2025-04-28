@@ -31,18 +31,18 @@ A web application designed to manage and display the submissions of registered p
 ```
 webdev-assessment2/
 ├── css/ 
-│ ├── navbar.css # Styles for the navigation bar 
-│ ├── table.css # Styles for the vendor table and filters 
-│ └── styles.css # Global styles 
+│ ├── navbar.css        # Styles for the navigation bar 
+│ ├── table.css         # Styles for the vendor table and filters 
+│ └── styles.css        # Global styles 
 ├── img/ 
-│ ├── team9-logo-2.png # Project logo
-│ └── market.png # background image
+│ ├── team9-logo-2.png  # Project logo
+│ └── market.png        # background image
 ├── links/ 
-│ └── table.html # Main page displaying vendor submissions 
+│ └── table.html        # Main page displaying vendor submissions 
 ├── scripts/ 
-│ └── app.js # JavaScript for interactivity 
-├── index.html # Landing page 
-└── readme.md # Project documentation
+│ └── app.js            # JavaScript for interactivity 
+├── index.html          # Landing page 
+└── readme.md           # Project documentation
 ```
 
 ---
